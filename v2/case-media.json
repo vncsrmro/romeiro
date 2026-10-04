@@ -1,0 +1,70 @@
+{
+  "paperx": {
+    "brandTitle": "Uma identidade feita para o campo.",
+    "brandIntro": "Símbolo, versões de assinatura e aplicação no produto compõem um sistema visual direto, legível e reconhecível em cada ponto da jornada.",
+    "brand": [
+      ["brand/paperx-identidade.png", "Sistema de assinaturas e ícone PaperX."],
+      ["brand/paperx-app-store.png", "A identidade aplicada à apresentação do aplicativo."]
+    ]
+  },
+  "stival": {
+    "brandTitle": "Do primeiro traço ao sistema.",
+    "brandIntro": "O processo passou por caminhos conceituais, estudo de geometria e um manual que organiza cor, proporção, fotografia e aplicações da marca.",
+    "brand": [
+      ["brand/stival-estudo-a.png", "Estudo inicial de conceito: percurso e acolhimento."],
+      ["brand/stival-estudo-b.png", "Estudo inicial de conceito: estrutura e precisão."],
+      ["brand/stival-7.png", "Explorações de construção do símbolo."],
+      ["brand/stival-10.png", "Geometria e construção do símbolo final."],
+      ["brand/stival-13.png", "Escala e redução da assinatura."],
+      ["brand/stival-15.png", "Paleta do sistema de identidade."],
+      ["brand/stival-20.png", "Direção fotográfica para o universo da Stival."],
+      ["brand/stival-28.png", "Estudo de aplicação da marca em sinalização."]
+    ]
+  },
+  "marcen": {
+    "brandTitle": "Uma marca que encaixa.",
+    "brandIntro": "O símbolo traduz encaixe, movimento e gestão. O manual amarra assinaturas, paleta, tipografia e aplicações do papel ao produto digital.",
+    "brand": [
+      ["brand/marcen-identidade.png", "Conceito, assinaturas, paleta e regras de uso da marca."],
+      ["brand/marcen-aplicacoes.png", "Cartões, proposta comercial, ícone e padrão gráfico."]
+    ]
+  },
+  "recebidos": {
+    "brandTitle": "Um gesto que vira identidade.",
+    "brandIntro": "Laço, caixa e abraço se unem em um símbolo simples. O manual desenvolve a personalidade, a linguagem e as aplicações da campanha.",
+    "brand": [
+      ["brand/recebidos-1.png", "Capa do manual de identidade."],
+      ["brand/recebidos-3.png", "Propósito, personalidade e compromisso da marca."],
+      ["brand/recebidos-4.png", "Construção conceitual do símbolo."],
+      ["brand/recebidos-6.png", "Versões oficiais da assinatura."],
+      ["brand/recebidos-8.png", "Paleta cromática da campanha."],
+      ["brand/recebidos-11.png", "Grafismos e ícones de apoio."],
+      ["brand/recebidos-15.png", "Estudos de ecobag, caixa e etiqueta."],
+      ["brand/recebidos-16.png", "Aplicações da identidade em formatos compactos."]
+    ]
+  },
+  "cuqui": {
+    "extraTitle": "O sabor também está nos detalhes.",
+    "extraIntro": "Fotografia, produto e composições visuais ampliam a personalidade da experiência digital.",
+    "extra": [
+      ["brand/cuqui-cookie-hero.jpg", "Direção visual para o produto."],
+      ["brand/cuqui-cookie-assorted.jpg", "Variedade de cookies apresentada no site."],
+      ["brand/cuqui-campaign.png", "Imagem da campanha digital CUQUI."]
+    ]
+  },
+  "tidle": {
+    "brandTitle": "Uma atmosfera para explorar.",
+    "brandIntro": "A direção visual cria uma entrada cinematográfica para o jogo e um universo reconhecível entre site, cenários e experiência jogável.",
+    "brand": [
+      ["brand/tidle-hero.png", "Arte de abertura do universo TIDLE."],
+      ["brand/tidle-cinematic.png", "Cenário cinematográfico usado no produto."]
+    ],
+    "extraTitle": "Além da landing page.",
+    "extraIntro": "Mapas e cenários do ambiente de jogo mostram a dimensão do produto além da sua apresentação pública.",
+    "extra": [
+      ["brand/tidle-hunt-amazon.png", "Mapa de caçada: Amazon Camp."],
+      ["brand/tidle-hunt-pyramid.png", "Mapa de caçada: Dark Pyramid."]
+    ],
+    "worldVideo": "brand/tidle-world.webm"
+  }
+}

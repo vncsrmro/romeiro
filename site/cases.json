@@ -1,0 +1,210 @@
+[
+  {
+    "id": "paperx",
+    "name": "PAPERX",
+    "category": "BRANDING · WEBSITE · APP · AGENTES DE IA",
+    "type": "marca site sistema",
+    "website": "https://paperxapp.com.br",
+    "title": "Uma marca. Um produto. Uma agência de IA.",
+    "lead": "Construímos o PaperX de ponta a ponta: marca, website e aplicativo para a gestão de assistências técnicas. E fomos além do software: uma agência com 13 agentes autônomos de inteligência artificial trabalhando 24 horas no negócio.",
+    "color": "#73dc9c",
+    "features": [
+      [
+        "Branding completo",
+        "Criação da marca, identidade visual e direção de comunicação. Um universo próprio, aplicado ao website e à experiência digital do negócio."
+      ],
+      [
+        "Website e apresentação do produto",
+        "Uma presença digital com identidade própria, demonstração interativa da jornada de atendimento e apresentação das funcionalidades do aplicativo."
+      ],
+      [
+        "A rotina da assistência, conectada",
+        "Agenda, orçamentos, clientes e histórico de equipamentos organizados para acompanhar o atendimento do planejamento à entrega."
+      ],
+      [
+        "Relatórios técnicos em campo",
+        "Registro de problemas e soluções, fotos, apontamento de horas e materiais, com recursos de voz e apoio de IA na elaboração do texto."
+      ],
+      [
+        "Da execução à documentação",
+        "Fluxo de assinatura e geração de relatórios digitais para documentar o serviço e dar continuidade ao atendimento."
+      ],
+      [
+        "Uma agência com 13 agentes de IA",
+        "Uma estrutura de 13 agentes autônomos de inteligência artificial, montada para trabalhar 24 horas no negócio PaperX. Estratégia de marca, produto digital e operação com IA no mesmo projeto."
+      ]
+    ],
+    "gallery": [
+      [
+        "paperx-app.webp",
+        "Aplicativo PaperX · detalhes do serviço no fluxo de relatório técnico, sem dados de clientes."
+      ]
+    ],
+    "caption": "Website do PaperX · a demonstração mobile utiliza dados ilustrativos.",
+    "image": "assets/portfolio/paperx.webp",
+    "alt": "Website atual do PaperX, com a demonstração mobile da agenda de atendimentos.",
+    "app": "https://app.paperxapp.com.br"
+  },
+  {
+    "id": "stival",
+    "name": "Stival Arquitetura",
+    "category": "POSICIONAMENTO · BRANDING · WEBSITE",
+    "type": "marca site",
+    "website": "https://stivalarquitetura.com.br",
+    "title": "A forma do cuidado.",
+    "lead": "Uma nova presença para um escritório especializado em arquitetura para a saúde. Estratégia, identidade e website conectados pela mesma ideia: precisão com sensibilidade.",
+    "color": "#c5b9a4",
+    "features": [
+      [
+        "Posicionamento de marca",
+        "Uma direção que expressa a especialidade da Stival e aproxima sua comunicação de gestores, investidores e equipes da área da saúde."
+      ],
+      [
+        "Identidade visual e manual",
+        "Símbolo, cores, tipografia e aplicações organizados em um sistema de marca consistente, do material institucional à presença digital."
+      ],
+      [
+        "Website institucional",
+        "Uma experiência editorial com projetos em destaque, navegação clara e espaço para a arquitetura falar por si."
+      ]
+    ],
+    "gallery": [
+      [
+        "stival-brand.webp",
+        "Identidade Stival · capa do manual de marca."
+      ]
+    ],
+    "caption": "Captura do website desenvolvido para a Stival.",
+    "image": "assets/portfolio/stival.webp",
+    "alt": "Captura do website desenvolvido para a Stival."
+  },
+  {
+    "id": "marcen",
+    "name": "Marcen ERP",
+    "category": "BRANDING · WEBSITE · ERP",
+    "type": "marca site sistema",
+    "title": "Do primeiro contato à última montagem.",
+    "lead": "Da criação da marca ao website e ao ERP completo. Construímos a presença e o produto digital do Marcen para conectar comercial, projetos, produção e financeiro à rotina das marcenarias.",
+    "color": "#b8ee84",
+    "features": [
+      [
+        "Branding completo",
+        "Criação da marca, identidade visual e direção de comunicação. Um universo próprio, aplicado ao website e à experiência digital do negócio."
+      ],
+      [
+        "Website do produto",
+        "Uma apresentação digital alinhada à marca, pensada para comunicar a proposta do ERP e tornar suas possibilidades claras para as marcenarias."
+      ],
+      [
+        "Comercial e projetos",
+        "CRM, clientes, orçamentos e contratos conectados ao acompanhamento dos projetos."
+      ],
+      [
+        "Da oficina à entrega",
+        "Produção, compras, agenda de montagem e termos de entrega para organizar o caminho entre o projeto e o móvel instalado."
+      ],
+      [
+        "Gestão financeira",
+        "Contas a receber, conciliação e DRE para acompanhar os números da operação."
+      ]
+    ],
+    "gallery": [],
+    "caption": "Landing page do Marcen fornecida para o portfólio. O painel exibido na composição usa dados demonstrativos.",
+    "image": "assets/portfolio/marcen.webp",
+    "alt": "Landing page do Marcen fornecida para o portfólio. O painel exibido na composição usa dados demonstrativos."
+  },
+  {
+    "id": "recebidos",
+    "name": "Recebidos do Bem",
+    "category": "BRANDING COMPLETO · WEBSITE · BACKOFFICE",
+    "type": "marca site sistema",
+    "website": "https://recebidosdobem.com.br",
+    "brand": "https://recebidosdobem.com.br/brand",
+    "title": "Uma marca feita para aproximar.",
+    "lead": "Criamos a marca Recebidos do Bem e todo o seu universo: símbolo, identidade visual, paleta, tipografia e linguagem. Essa identidade ganha vida no website da campanha e no backoffice que organiza cadastros e entregas.",
+    "color": "#edac8e",
+    "features": [
+      [
+        "Branding completo, do significado à aplicação",
+        "O presente que acolhe: laço, caixa e abraço em um símbolo próprio. Coral, creme e marrom, tipografia próxima e linguagem cuidadosa formam uma identidade feita para conectar pessoas."
+      ],
+      [
+        "Um universo de marca para crescer",
+        "Assinaturas, cores, tipografia e estudos de aplicação reunidos em um manual digital. Consistência para comunicar, mobilizar parceiros e levar a marca para diferentes pontos de contato."
+      ],
+      [
+        "Website e cadastramento",
+        "Apresentação da campanha, informações para participantes e parceiros e um fluxo de cadastro organizado em etapas."
+      ],
+      [
+        "Backoffice da campanha",
+        "Painel para a equipe gerenciar cadastros, acompanhar participantes e organizar entregas em um só lugar."
+      ]
+    ],
+    "gallery": [
+      [
+        "brand.webp",
+        "Manual digital da identidade desenvolvida para Recebidos do Bem."
+      ],
+      [
+        "recebidos-aplicacoes.webp",
+        "Estudos de aplicação da identidade: ecobag, caixa e etiqueta."
+      ]
+    ],
+    "caption": "Captura do site público da campanha.",
+    "image": "assets/portfolio/recebidos.webp",
+    "alt": "Captura do site público da campanha."
+  },
+  {
+    "id": "cuqui",
+    "name": "CUQUI",
+    "category": "WEBSITE · CARDÁPIO DIGITAL",
+    "type": "site",
+    "website": "https://cuqui.com.br",
+    "title": "Uma experiência de dar água na boca.",
+    "lead": "O universo dos cookies artesanais em uma experiência digital cheia de personalidade. Um site que apresenta a marca, valoriza os produtos e aproxima o cliente da próxima fornada.",
+    "color": "#b2aff9",
+    "features": [
+      [
+        "Presença digital com personalidade",
+        "Uma linguagem visual expressiva, com animações e composição que traduzem o universo da CUQUI."
+      ],
+      [
+        "Cardápio e jornada de compra",
+        "Produtos, sabores, disponibilidade e informações de entrega em uma vitrine digital conectada à jornada de pedido."
+      ]
+    ],
+    "gallery": [],
+    "caption": "Captura do website e cardápio digital da CUQUI.",
+    "image": "assets/portfolio/cuqui.webp",
+    "alt": "Captura do website e cardápio digital da CUQUI."
+  },
+  {
+    "id": "tidle",
+    "name": "TIDLE",
+    "category": "BRANDING · WEBSITE · ENTRETENIMENTO",
+    "type": "marca site sistema",
+    "website": "https://tidle.com.br",
+    "title": "Nostalgia com um novo ritmo.",
+    "lead": "Criação de marca e website para um universo de fantasia inspirado nos idle RPGs. Identidade, atmosfera e experiência digital construídas juntas para apresentar o TIDLE e preparar o público para a próxima jornada.",
+    "color": "#e7c765",
+    "features": [
+      [
+        "Branding completo",
+        "Criação da marca, identidade visual e direção de comunicação. Um universo próprio, aplicado ao website e à experiência digital do negócio."
+      ],
+      [
+        "Universo digital",
+        "Uma direção visual de fantasia que conecta a nostalgia dos RPGs à proposta de um jogo para navegador."
+      ],
+      [
+        "Página de pré-lançamento",
+        "Apresentação do projeto e cadastro de interessados. A página pública está em fase de pré-lançamento."
+      ]
+    ],
+    "gallery": [],
+    "caption": "Captura da página pública de pré-lançamento do TIDLE.",
+    "image": "assets/portfolio/tidle.webp",
+    "alt": "Captura da página pública de pré-lançamento do TIDLE."
+  }
+]
