@@ -1,0 +1,37 @@
+{
+  "brand": "Romeiro",
+  "version": "1.0",
+  "colors": {
+    "paper": "#EDEDE5",
+    "ink": "#242520",
+    "lime": "#D7FF3F",
+    "dark": "#20231F",
+    "body": "#62665A"
+  },
+  "typography": {
+    "primary": "Space Grotesk",
+    "editorial": "Cormorant Garamond Italic",
+    "signature": "Mrs Saint Delafield"
+  },
+  "spacing": [
+    4,
+    8,
+    16,
+    24,
+    32,
+    48,
+    64,
+    96
+  ],
+  "radius": {
+    "card": 3,
+    "button": 999
+  },
+  "motion": {
+    "microMs": 220,
+    "revealMs": 700,
+    "staggerMs": 90,
+    "easing": "cubic-bezier(.22,1,.36,1)",
+    "reducedMotion": true
+  }
+}

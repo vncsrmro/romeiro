@@ -1,0 +1,15 @@
+ROMEIRO / KIT DE MARCA 1.0
+
+Logo principal: logos/romeiro-grafite.svg
+Vetores em contornos, sem dependência de fontes.
+Versões: grafite, marfim e lima. PNG com fundo transparente.
+Ícone compacto: romeiro-icone.svg.
+Fontes e licenças em fonts/.
+Templates editáveis em templates/. Textos das aplicações usam Space Grotesk.
+Tokens digitais em romeiro-tokens.css e romeiro-tokens.json.
+O manual completo está na pasta Manual/.
+
+Os cartões são bases de composição em proporção 90x50mm; a arte final para gráfica deve ser preparada com 3mm de sangria e perfil CMYK da produção. Os SVGs possuem dimensões proporcionais em pixels.
+
+Contato utilizado: WhatsApp público da InovaSys.
+Versão 1.0 / Outubro 2026.
