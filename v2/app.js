@@ -7,10 +7,66 @@ const category={paperx:'Produto digital · Marca · IA',stival:'Estratégia · I
 const observer=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');observer.unobserve(e.target)}}),{threshold:.08});
 const observe=()=>document.querySelectorAll('.reveal:not(.visible)').forEach(el=>observer.observe(el));observe();
 const grid=document.getElementById('projects-grid');
-try{const response=await fetch('/cases.json');if(!response.ok)throw Error();const projects=await response.json();grid.innerHTML=projects.map((p,i)=>{const [cover,bg,cls]=[p.id+'-v2.jpg','#edede5',''];return `<a class="project reveal" href="/projeto/?id=${p.id}" data-type="${p.type}" style="--project-bg:${bg}" aria-label="Explorar case ${escapeHTML(p.name)}"><div class="project-art ${cls}"><img loading="lazy" src="/assets/cases/${cover}" alt="${escapeHTML(p.name)} — ${escapeHTML(p.title)}"><video muted loop playsinline preload="none" aria-hidden="true" data-src="/assets/cases/${p.id}-v2.mp4"></video><span class="project-index">0${i+1} / 06</span><span class="project-open" aria-hidden="true">↗</span></div><div class="project-info"><div><h3>${escapeHTML(p.name)}</h3><p>${category[p.id]}</p></div><span>VER PROJETO ↗</span></div></a>`}).join('');observe();setupProjects();}catch{grid.innerHTML='<p>Não foi possível carregar os projetos. <a href="/">Recarregar página ↗</a></p>'}
-document.querySelectorAll('[data-filter]').forEach(button=>button.addEventListener('click',()=>{document.querySelectorAll('[data-filter]').forEach(b=>{b.classList.toggle('active',b===button);b.setAttribute('aria-pressed',b===button?'true':'false')});document.querySelectorAll('.project').forEach(card=>{card.hidden=button.dataset.filter!=='all'&&!card.dataset.type.split(' ').includes(button.dataset.filter);if(card.hidden)card.querySelector('video').pause()});observe()}));
-function setupProjects(){const cursor=document.querySelector('.cursor');document.querySelectorAll('.project').forEach(card=>{const art=card.querySelector('.project-art'),video=card.querySelector('video');const start=async()=>{if(reduced)return;if(!video.src)video.src=video.dataset.src;try{await video.play();if(card.matches(':hover')||card.contains(document.activeElement))card.classList.add('is-playing');else video.pause()}catch{}};const stop=()=>{video.pause();card.classList.remove('is-playing');art.style.removeProperty('--rx');art.style.removeProperty('--ry');cursor.classList.remove('active')};card.addEventListener('mouseenter',()=>{start();if(fine&&!reduced)cursor.classList.add('active')});card.addEventListener('mouseleave',stop);card.addEventListener('focus',start);card.addEventListener('blur',stop);card.addEventListener('mousemove',event=>{if(!fine||reduced)return;const r=art.getBoundingClientRect(),x=(event.clientX-r.left)/r.width,y=(event.clientY-r.top)/r.height;art.style.setProperty('--rx',`${(y-.5)*-4}deg`);art.style.setProperty('--ry',`${(x-.5)*4}deg`);art.style.setProperty('--mx',`${x*100}%`);art.style.setProperty('--my',`${y*100}%`);cursor.style.left=event.clientX+'px';cursor.style.top=event.clientY+'px'})})}
+try{const response=await fetch('/cases.json');if(!response.ok)throw Error();const projects=await response.json();grid.innerHTML=projects.map((p,i)=>{const [cover,bg,cls]=[p.id+'.webp',p.color||'#edede5','video-card'];return `<a class="project reveal" href="/projeto/?id=${p.id}" data-type="${p.type}" style="--project-bg:${bg}" aria-label="Explorar case ${escapeHTML(p.name)}"><div class="project-art ${cls}"><img loading="lazy" src="/assets/cases/${cover}" alt="${escapeHTML(p.name)} — ${escapeHTML(p.title)}"><span class="project-index">0${i+1} / 06</span><span class="project-open" aria-hidden="true">↗</span></div><div class="project-info"><div><h3>${escapeHTML(p.name)}</h3><p>${category[p.id]}</p></div><span>VER PROJETO ↗</span></div></a>`}).join('');observe();setupProjects();}catch{grid.innerHTML='<p>Não foi possível carregar os projetos. <a href="/">Recarregar página ↗</a></p>'}
+document.querySelectorAll('[data-filter]').forEach(button=>button.addEventListener('click',()=>{document.querySelectorAll('[data-filter]').forEach(b=>{b.classList.toggle('active',b===button);b.setAttribute('aria-pressed',b===button?'true':'false')});document.querySelectorAll('.project').forEach(card=>{card.hidden=button.dataset.filter!=='all'&&!card.dataset.type.split(' ').includes(button.dataset.filter);if(card.hidden)card.querySelector('video')?.pause()});observe()}));
+function setupProjects(){const cursor=document.querySelector('.cursor');document.querySelectorAll('.project').forEach(card=>{const art=card.querySelector('.project-art');const start=async()=>{if(reduced)return;if(card.matches(':hover')||card.contains(document.activeElement))card.classList.add('is-playing');};const stop=()=>{card.classList.remove('is-playing');art.style.removeProperty('--rx');art.style.removeProperty('--ry');cursor.classList.remove('active')};card.addEventListener('mouseenter',()=>{start();if(fine&&!reduced)cursor.classList.add('active')});card.addEventListener('mouseleave',stop);card.addEventListener('focus',start);card.addEventListener('blur',stop);card.addEventListener('mousemove',event=>{if(!fine||reduced)return;const r=art.getBoundingClientRect(),x=(event.clientX-r.left)/r.width,y=(event.clientY-r.top)/r.height;art.style.setProperty('--rx',`${(y-.5)*-4}deg`);art.style.setProperty('--ry',`${(x-.5)*4}deg`);art.style.setProperty('--mx',`${x*100}%`);art.style.setProperty('--my',`${y*100}%`);cursor.style.left=event.clientX+'px';cursor.style.top=event.clientY+'px'})})}
 const menu=document.querySelector('.menu-button'),mobile=document.querySelector('.mobile-nav');function closeMenu(){menu.setAttribute('aria-expanded','false');menu.setAttribute('aria-label','Abrir menu');mobile.hidden=true}menu.addEventListener('click',()=>{const open=menu.getAttribute('aria-expanded')==='true';menu.setAttribute('aria-expanded',String(!open));menu.setAttribute('aria-label',open?'Abrir menu':'Fechar menu');mobile.hidden=open});mobile.querySelectorAll('a').forEach(a=>a.addEventListener('click',closeMenu));document.addEventListener('keydown',e=>{if(e.key==='Escape'){closeMenu();menu.focus()}});matchMedia('(min-width:761px)').addEventListener('change',e=>{if(e.matches)closeMenu()});
 const clock=document.getElementById('local-time');function updateTime(){clock.textContent=new Intl.DateTimeFormat('pt-BR',{timeZone:'America/Sao_Paulo',hour:'2-digit',minute:'2-digit',hour12:false}).format(new Date())}updateTime();setInterval(updateTime,60000);document.getElementById('year').textContent=new Date().getFullYear();
 let scrollPending=false;addEventListener('scroll',()=>{if(scrollPending)return;scrollPending=true;requestAnimationFrame(()=>{const max=document.documentElement.scrollHeight-innerHeight;document.querySelector('.scroll-progress').style.transform=`scaleX(${max>0?scrollY/max:0})`;scrollPending=false})},{passive:true});
 document.addEventListener('visibilitychange',()=>{if(document.hidden)document.querySelectorAll('video').forEach(v=>{v.pause();v.closest('.project')?.classList.remove('is-playing')})});
+
+// Terminal scramble effect
+class ScrambleText {
+  constructor(el) {
+    this.el = el;
+    this.originalText = el.innerText;
+    this.chars = '!<>-_\\/[]{}—=+*^?#_';
+    this.update = this.update.bind(this);
+  }
+  start() {
+    this.frame = 0;
+    this.queue = [];
+    for (let i = 0; i < this.originalText.length; i++) {
+      this.queue.push({
+        from: this.chars[Math.floor(Math.random() * this.chars.length)],
+        to: this.originalText[i],
+        start: Math.floor(Math.random() * 30),
+        end: Math.floor(Math.random() * 30) + 30
+      });
+    }
+    cancelAnimationFrame(this.frameRequest);
+    this.frameRequest = requestAnimationFrame(this.update);
+  }
+  update() {
+    let output = '';
+    let complete = 0;
+    for (let i = 0; i < this.queue.length; i++) {
+      let { from, to, start, end, char } = this.queue[i];
+      if (this.frame >= end) {
+        complete++;
+        output += to;
+      } else if (this.frame >= start) {
+        if (!char || Math.random() < 0.28) {
+          char = this.chars[Math.floor(Math.random() * this.chars.length)];
+          this.queue[i].char = char;
+        }
+        output += '<span class="scramble-char">' + char + '</span>';
+      } else {
+        output += from;
+      }
+    }
+    this.el.innerHTML = output;
+    if (complete === this.queue.length) {
+      this.el.innerHTML = this.originalText;
+    } else {
+      this.frameRequest = requestAnimationFrame(this.update);
+      this.frame++;
+    }
+  }
+}
+
+const scrambleEl = document.querySelector('.scramble-text');
+if (scrambleEl && !reduced) {
+  const fx = new ScrambleText(scrambleEl);
+  setTimeout(() => fx.start(), 800);
+}
