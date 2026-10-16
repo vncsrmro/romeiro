@@ -1,4 +1,5 @@
 (() => {
+  const escapeHTML=value=>String(value).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
   const asset = name => `/assets/cases/${name}`;
   let mounting = false;
   async function mount() {
@@ -12,7 +13,7 @@
     grid.innerHTML = projects.map((p,i) => `
       <a class="vr-case-card" href="/cases/${p.id}/" aria-label="Abrir case ${p.name}">
         <span class="vr-case-media">
-          <video muted playsinline autoplay loop preload="metadata" poster="${asset(p.image.split('/').pop())}" aria-hidden="true"><source src="${asset(p.id+'-preview.mp4')}" type="video/mp4"></video>
+          ${p.hero?`<img style="width:100%;height:100%;object-fit:cover" src="${asset(p.cover)}" alt="${escapeHTML(p.name)}">`:`<video muted playsinline autoplay loop preload="metadata" poster="${asset(p.image.split('/').pop())}" aria-hidden="true"><source src="${asset(p.id+'-preview.mp4')}" type="video/mp4"></video>`}
           <span class="vr-case-index">0${i+1} / 0${projects.length}</span>
           <span class="vr-case-open">Ver case <span aria-hidden="true">↗</span></span>
         </span>

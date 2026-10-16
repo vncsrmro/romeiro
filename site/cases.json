@@ -1,5 +1,66 @@
 [
   {
+    "id": "tapp",
+    "name": "tapp.food",
+    "category": "BRANDING · UX/UI · WEBSITE · PLATAFORMA",
+    "type": "marca site sistema",
+    "website": "",
+    "title": "Deu vontade? Dá um tapp.",
+    "lead": "Da identidade à experiência digital: criamos o universo da tapp.food para aproximar restaurantes e pessoas através da comida em movimento. Branding, site comercial e desenvolvimento das interfaces de uma plataforma que reúne cardápio em vídeo, atendimento de salão e gestão. Um produto com linguagem própria, preparado para sua próxima etapa: o lançamento.",
+    "color": "#f0442e",
+    "cover": "tapp/mesa.jpg",
+    "hero": "tapp/mesa.jpg",
+    "status": "LANÇAMENTO EM PREPARAÇÃO",
+    "features": [
+      [
+        "Uma marca que dá vontade",
+        "Estratégia visual, logotipo, monograma T com gesto de aproximação, cores, tipografia e aplicações. Tomate, creme e carvão traduzem energia, apetite e proximidade."
+      ],
+      [
+        "Cardápio em movimento",
+        "Experiência mobile com feed vertical de vídeos e fotos, categorias, busca, detalhes dos pratos e sacola. Uma jornada visual da descoberta à confirmação da seleção."
+      ],
+      [
+        "O salão na mesma linguagem",
+        "Interface dedicada ao garçom, com visão de mesas, filtros, chamados e edição da seleção. A identidade acompanha cada ponto de contato do atendimento."
+      ],
+      [
+        "Gestão para o restaurante e a plataforma",
+        "Painéis próprios para administração do restaurante e HQ, com cenários de métricas, acervo e gestão da plataforma. Experiências distintas para cada perfil de uso."
+      ],
+      [
+        "Website e apresentação comercial",
+        "Landing page com narrativa de produto, aplicações da marca e demonstrações interativas das interfaces. Design e desenvolvimento conectados à apresentação do negócio."
+      ],
+      [
+        "Do digital à mesa",
+        "Sistema de marca aplicado a placas de mesa, kit de ativação e vitrine, com direção visual para acesso por aproximação e QR Code. Cinco aplicações web com componentes compartilhados."
+      ]
+    ],
+    "gallery": [
+      [
+        "tapp/customer.jpg",
+        "Cardápio em vídeo — interface real com o restaurante demonstrativo Brasa & Alma."
+      ],
+      [
+        "tapp/waiter.jpg",
+        "Interface do garçom — mesas e seleção em cenário demonstrativo."
+      ],
+      [
+        "tapp/admin.jpg",
+        "Administração do restaurante — painel com dados de demonstração."
+      ],
+      [
+        "tapp/hq.jpg",
+        "HQ — interface de gestão da plataforma, em cenário demonstrativo."
+      ]
+    ],
+    "caption": "Website comercial — captura da implementação local, com demonstração do produto.",
+    "image": "assets/cases/tapp/marketing.jpg",
+    "alt": "Site comercial da tapp.food com identidade tomate e creme.",
+    "productIntro": "Cinco aplicações web, uma identidade compartilhada. Capturas reais da implementação local com dados demonstrativos. O projeto está em preparação para lançamento; as telas não representam operação comercial ativa."
+  },
+  {
     "id": "paperx",
     "name": "PAPERX",
     "category": "BRANDING · WEBSITE · APP · AGENTES DE IA",
