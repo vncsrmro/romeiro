@@ -3,7 +3,7 @@ const reduced=matchMedia('(prefers-reduced-motion: reduce)').matches;
 const fine=matchMedia('(hover: hover) and (pointer: fine)').matches;
 const escapeHTML=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const assets={paperx:['paperx.webp','#cdd8bf','video-card'],stival:['brand/stival-28.png','#ced1bf',''],marcen:['marcen.webp','#b1bf9d','video-card'],recebidos:['recebidos-aplicacoes.webp','#c5b5a3',''],cuqui:['brand/cuqui-cookie-hero.jpg','#ada899',''],tidle:['brand/tidle-cinematic.png','#292e27','']};
-const category={paperx:'Produto digital · Marca · IA',stival:'Estratégia · Identidade · Website',marcen:'Marca · Plataforma de gestão',recebidos:'Identidade · Website · Backoffice',cuqui:'Experiência digital · E-commerce',tidle:'Universo visual · Jogo · Website'};
+const category={accanto:'Direção de arte · Website editorial',tapp:'Branding · UX/UI · Plataforma',paperx:'Produto digital · Marca · IA',stival:'Estratégia · Identidade · Website',marcen:'Marca · Plataforma de gestão',recebidos:'Identidade · Website · Backoffice',cuqui:'Experiência digital · E-commerce',tidle:'Universo visual · Jogo · Website'};
 const observer=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');observer.unobserve(e.target)}}),{threshold:.08});
 const observe=()=>document.querySelectorAll('.reveal:not(.visible)').forEach(el=>observer.observe(el));observe();
 const grid=document.getElementById('projects-grid');

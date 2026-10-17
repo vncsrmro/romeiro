@@ -151,5 +151,35 @@
         "Presença no restaurante — estudo de aplicação na vitrine."
       ]
     ]
+  },
+  "accanto": {
+    "brandTitle": "Uma identidade feita para pulsar.",
+    "brandIntro": "Do letreiro monumental às capas autorais e posters de lançamento: um sistema visual direto, cru e expressivo, construído para conectar artistas e pista sem barreiras.",
+    "brand": [
+      [
+        "accanto/identity.svg",
+        "Guia da identidade visual — letreiro vetorial, manifesto e paleta de alto contraste."
+      ],
+      [
+        "accanto/poster-black.jpg",
+        "Poster conceitual de abertura — 'Music Happens Side by Side'."
+      ],
+      [
+        "accanto/poster-orange.jpg",
+        "Poster institucional da marca — 'Criar. Conectar. Movimentar.' sob curadoria de Illusionize."
+      ],
+      [
+        "accanto/brand-party.jpg",
+        "Label Party — 'Uma noite construída por todos: artistas e público lado a lado'."
+      ],
+      [
+        "accanto/brand-encontro.jpg",
+        "Manifesto gráfico — 'Um espaço de encontro para compartilhar descobertas'."
+      ],
+      [
+        "accanto/covers.svg",
+        "Série de capas geométricas autorais desenvolvidas para o catálogo de lançamentos."
+      ]
+    ]
   }
 }

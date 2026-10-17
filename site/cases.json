@@ -1,5 +1,70 @@
 [
   {
+    "id": "accanto",
+    "name": "Accanto Records",
+    "category": "DIREÇÃO DE ARTE · BRANDING · NEXT.JS · WEBSITE EDITORIAL",
+    "type": "marca site",
+    "website": "https://accanto.romei.ro",
+    "title": "Música acontece lado a lado.",
+    "lead": "Identidade visual, direção de arte e desenvolvimento do site editorial da Accanto Records, gravadora e label party criada sob a curadoria de Illusionize. Uma experiência web imersiva construída com Next.js, Framer Motion e Lenis, unindo manifesto de marca, reprodução contínua de áudio via Apple Music, narrativa horizontal de pista e envio de demos.",
+    "color": "#e94e31",
+    "cover": "accanto/hero.jpg",
+    "hero": "accanto/hero.jpg",
+    "status": "ONLINE · DISPONÍVEL EM ACCANTO.ROMEI.RO",
+    "features": [
+      [
+        "Identidade gráfica monumental",
+        "Reconstrução vetorial da marca Accanto, tipografia grotesca de forte presença e contraste marcante entre preto, gelo (#F4F4F0) e laranja vibrante (#E94E31)."
+      ],
+      [
+        "Site editorial com movimento apurado",
+        "Experiência com entrada em mola, letreiro com fixação e revelação progressiva, parallax na fotografia de abertura e rolagem suave via Lenis."
+      ],
+      [
+        "Player de áudio contínuo",
+        "Player persistente com prévias oficiais conectadas à API do Apple Music, controle de reprodução, progresso, volume e sincronização de estado com o catálogo."
+      ],
+      [
+        "Label Party em percurso horizontal",
+        "Narrativa visual que traduz a energia da pista de dança, transformando o scroll vertical em navegação lateral contínua em desktop e mobile."
+      ],
+      [
+        "Curadoria de lançamentos e envio de demos",
+        "Catálogo interativo com filtros por Single e EP, janela modal de detalhes para cada faixa e formulário para novos artistas enviarem demos diretamente ao selo."
+      ],
+      [
+        "Engenharia frontend e acessibilidade",
+        "Desenvolvido com React, Next.js, TypeScript e Tailwind CSS, otimizado para exportação estática de alta velocidade no Cloudflare e suporte completo a prefers-reduced-motion."
+      ]
+    ],
+    "gallery": [
+      [
+        "accanto/manifesto.jpg",
+        "Manifesto editorial — tipografia de alto contraste, revelação progressiva e composição visual 'Horizontal. Lado a lado'."
+      ],
+      [
+        "accanto/releases.jpg",
+        "Catálogo de lançamentos — grid com capas autorais, filtros por formato e player sincronizado em tempo real."
+      ],
+      [
+        "accanto/party.jpg",
+        "Label Party — narrativa imersiva com percurso horizontal e fotografia da pista compartilhada."
+      ],
+      [
+        "accanto/demo.jpg",
+        "Envio de demo — modal dedicado para artistas e produtores submeterem faixas inéditas para a curadoria."
+      ],
+      [
+        "accanto/mobile.jpg",
+        "Experiência mobile — adaptação responsiva completa mantendo o impacto tipográfico e a reprodução de áudio."
+      ]
+    ],
+    "caption": "Website editorial — captura da plataforma oficial publicada em accanto.romei.ro.",
+    "image": "assets/cases/accanto/hero.jpg",
+    "alt": "Website editorial da Accanto Records com tipografia monumental e player integrado.",
+    "productIntro": "Plataforma editorial publicada e em produção. O site une a essência da gravadora e das noites de Label Party em uma experiência digital refinada."
+  },
+  {
     "id": "tapp",
     "name": "tapp.food",
     "category": "BRANDING · UX/UI · WEBSITE · PLATAFORMA",
