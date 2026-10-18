@@ -17,7 +17,7 @@
           <span class="vr-case-index">0${i+1} / 0${projects.length}</span>
           <span class="vr-case-open">Ver case <span aria-hidden="true">↗</span></span>
         </span>
-        <span class="vr-case-meta"><span>${p.category}</span><span>InovaSys</span></span>
+        <span class="vr-case-meta"><span>${p.category}</span><span>${escapeHTML(p.client || "InovaSys")}</span></span>
         <span class="vr-case-title">${p.name}<span aria-hidden="true">↗</span></span>
         <span class="vr-case-lead">${p.title}</span>
       </a>`).join('');

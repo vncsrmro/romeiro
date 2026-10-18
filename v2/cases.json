@@ -2,67 +2,70 @@
   {
     "id": "accanto",
     "name": "Accanto Records",
-    "category": "DIREÇÃO DE ARTE · BRANDING · NEXT.JS · WEBSITE EDITORIAL",
-    "type": "marca site",
+    "category": "WEBSITE & BACKOFFICE · ENGENHARIA FRONTEND · NEXT.JS",
+    "type": "site sistema",
+    "client": "Accanto Records",
+    "clientBreadcrumb": "ACCANTO RECORDS × ROMEIRO",
+    "role": "Engenharia frontend e tecnologia",
     "website": "https://accanto.romei.ro",
-    "title": "Música acontece lado a lado.",
-    "lead": "Identidade visual, direção de arte e desenvolvimento do site editorial da Accanto Records, gravadora e label party criada sob a curadoria de Illusionize. Uma experiência web imersiva construída com Next.js, Framer Motion e Lenis, unindo manifesto de marca, reprodução contínua de áudio via Apple Music, narrativa horizontal de pista e envio de demos.",
+    "title": "Website e backoffice editorial da gravadora sob curadoria de Illusionize.",
+    "lead": "Desenvolvimento do website editorial e infraestrutura de backoffice da Accanto Records, gravadora e label party idealizada sob a curadoria de Illusionize. Foco total em tecnologia e engenharia web: implementação com Next.js e exportação estática no Cloudflare Pages, física de movimento com Framer Motion e Lenis, player contínuo integrado à API do Apple Music, experiência horizontal na Label Party e canal de recepção de demos.",
     "color": "#e94e31",
     "cover": "accanto/hero.jpg",
     "hero": "accanto/hero.jpg",
     "status": "ONLINE · DISPONÍVEL EM ACCANTO.ROMEI.RO",
     "features": [
       [
-        "Identidade gráfica monumental",
-        "Reconstrução vetorial da marca Accanto, tipografia grotesca de forte presença e contraste marcante entre preto, gelo (#F4F4F0) e laranja vibrante (#E94E31)."
+        "Arquitetura frontend e infraestrutura",
+        "Desenvolvimento em Next.js, React, TypeScript e Tailwind CSS com saída 100% estática via Cloudflare Pages. Zero servidores dinâmicos para manter, alta disponibilidade e carregamento instantâneo."
       ],
       [
-        "Site editorial com movimento apurado",
-        "Experiência com entrada em mola, letreiro com fixação e revelação progressiva, parallax na fotografia de abertura e rolagem suave via Lenis."
+        "Player contínuo e streaming de áudio",
+        "Mecanismo persistente de áudio que mantém a reprodução contínua durante toda a navegação. Integração direta com as prévias oficiais da API do Apple Music, controle de volume, progresso e sincronização de estado com o catálogo."
       ],
       [
-        "Player de áudio contínuo",
-        "Player persistente com prévias oficiais conectadas à API do Apple Music, controle de reprodução, progresso, volume e sincronização de estado com o catálogo."
+        "Física de movimento e animações",
+        "Implementação de transições fluidas com Framer Motion e Lenis: entrada com molas balanceadas, efeito de parallax na fotografia de abertura, revelação progressiva do texto do manifesto atrelada ao scroll e rolagem suave."
       ],
       [
         "Label Party em percurso horizontal",
-        "Narrativa visual que traduz a energia da pista de dança, transformando o scroll vertical em navegação lateral contínua em desktop e mobile."
+        "Engenharia da seção Label Party com conversão do scroll vertical padrão em translação horizontal contínua de alta performance, mantendo paridade de experiência entre desktop e toque em dispositivos móveis."
       ],
       [
-        "Curadoria de lançamentos e envio de demos",
-        "Catálogo interativo com filtros por Single e EP, janela modal de detalhes para cada faixa e formulário para novos artistas enviarem demos diretamente ao selo."
+        "Fluxo de demos e catalogação",
+        "Interface interativa para submissão de faixas com validações no cliente, modais com captura acessível de foco e navegação estruturada do catálogo com filtros dinâmicos por formato."
       ],
       [
-        "Engenharia frontend e acessibilidade",
-        "Desenvolvido com React, Next.js, TypeScript e Tailwind CSS, otimizado para exportação estática de alta velocidade no Cloudflare e suporte completo a prefers-reduced-motion."
+        "Acessibilidade e otimização",
+        "Suporte completo a prefers-reduced-motion para desativação de efeitos de movimento, navegação integral por teclado e foco em máxima fidelidade às especificações de design fornecidas pelo cliente."
       ]
     ],
     "gallery": [
       [
         "accanto/manifesto.jpg",
-        "Manifesto editorial — tipografia de alto contraste, revelação progressiva e composição visual 'Horizontal. Lado a lado'."
+        "Seção manifesto — implementação de revelação de texto progressiva via scroll e efeitos de movimento."
       ],
       [
         "accanto/releases.jpg",
-        "Catálogo de lançamentos — grid com capas autorais, filtros por formato e player sincronizado em tempo real."
+        "Catálogo de lançamentos — grid dinâmico com filtros em tempo real e integração com o player persistente."
       ],
       [
         "accanto/party.jpg",
-        "Label Party — narrativa imersiva com percurso horizontal e fotografia da pista compartilhada."
+        "Label Party — mecanismo de scroll vertical mapeado para translação horizontal contínua."
       ],
       [
         "accanto/demo.jpg",
-        "Envio de demo — modal dedicado para artistas e produtores submeterem faixas inéditas para a curadoria."
+        "Envio de demo — modal interativo acessível para submissão de faixas e integração com backoffice."
       ],
       [
         "accanto/mobile.jpg",
-        "Experiência mobile — adaptação responsiva completa mantendo o impacto tipográfico e a reprodução de áudio."
+        "Implementação responsiva mobile — navegação otimizada para toque com player fixo e performance nativa."
       ]
     ],
-    "caption": "Website editorial — captura da plataforma oficial publicada em accanto.romei.ro.",
+    "caption": "Website editorial e backoffice — aplicação em produção publicada em accanto.romei.ro.",
     "image": "assets/cases/accanto/hero.jpg",
-    "alt": "Website editorial da Accanto Records com tipografia monumental e player integrado.",
-    "productIntro": "Plataforma editorial publicada e em produção. O site une a essência da gravadora e das noites de Label Party em uma experiência digital refinada."
+    "alt": "Website oficial da Accanto Records desenvolvido por Vinicius Romeiro.",
+    "productIntro": "Engenharia frontend e tecnologia da plataforma. Todo o desenvolvimento foi focado em performance, física de movimento e reprodução de áudio sem interrupções."
   },
   {
     "id": "tapp",
