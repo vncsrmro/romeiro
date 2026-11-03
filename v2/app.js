@@ -70,3 +70,52 @@ if (scrambleEl && !reduced) {
   const fx = new ScrambleText(scrambleEl);
   setTimeout(() => fx.start(), 800);
 }
+
+// Elefante Terminal Installer Tabs & Copy Handler
+const termTabs = document.querySelectorAll('.terminal-tab-btn');
+const termCode = document.getElementById('terminal-code');
+const termCopy = document.getElementById('terminal-copy-btn');
+const installCommands = {
+  powershell: 'irm https://raw.githubusercontent.com/vncsrmro/elefante/main/install.ps1 | iex',
+  bash: 'curl -fsSL https://raw.githubusercontent.com/vncsrmro/elefante/main/install.sh | bash'
+};
+
+if (termTabs.length && termCode) {
+  termTabs.forEach(tab => {
+    tab.addEventListener('click', () => {
+      termTabs.forEach(t => t.classList.remove('active'));
+      tab.classList.add('active');
+      const os = tab.dataset.os;
+      if (installCommands[os]) {
+        termCode.textContent = installCommands[os];
+      }
+    });
+  });
+}
+
+if (termCopy && termCode) {
+  termCopy.addEventListener('click', async () => {
+    const textToCopy = termCode.textContent.trim();
+    try {
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        await navigator.clipboard.writeText(textToCopy);
+      } else {
+        const textarea = document.createElement('textarea');
+        textarea.value = textToCopy;
+        textarea.style.position = 'fixed';
+        textarea.style.opacity = '0';
+        document.body.appendChild(textarea);
+        textarea.select();
+        document.execCommand('copy');
+        document.body.removeChild(textarea);
+      }
+      const prevHTML = termCopy.innerHTML;
+      termCopy.innerHTML = '<span style="color:var(--lime);font-weight:700">Copiado! ✓</span>';
+      setTimeout(() => {
+        termCopy.innerHTML = prevHTML;
+      }, 2200);
+    } catch {
+      // ignore clipboard error
+    }
+  });
+}
