@@ -131,3 +131,17 @@ if (identity && fine && !reduced) {
   });
   identity.addEventListener('pointerleave', () => identity.classList.remove('is-exploring'));
 }
+
+// Pause decorative motion when the showcase is off-screen or the visitor asks.
+const elephantSection = document.getElementById('elefante');
+const motionToggle = elephantSection?.querySelector('.motion-toggle');
+if (elephantSection && motionToggle) {
+  motionToggle.addEventListener('click', () => {
+    const paused = elephantSection.classList.toggle('motion-paused');
+    motionToggle.setAttribute('aria-pressed', String(paused));
+    motionToggle.textContent = paused ? 'Retomar animação' : 'Pausar animação';
+  });
+  new IntersectionObserver(([entry]) => {
+    elephantSection.classList.toggle('motion-offscreen', !entry.isIntersecting);
+  }).observe(elephantSection);
+}
