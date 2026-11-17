@@ -1,73 +1,5 @@
 [
   {
-    "id": "accanto",
-    "name": "Accanto Records",
-    "category": "WEBSITE & BACKOFFICE · ENGENHARIA FRONTEND · NEXT.JS",
-    "type": "site sistema",
-    "client": "Accanto Records",
-    "clientBreadcrumb": "ACCANTO RECORDS × ROMEIRO",
-    "role": "Engenharia frontend e tecnologia",
-    "website": "https://accanto.romei.ro",
-    "title": "Website e backoffice editorial da gravadora sob curadoria de Illusionize.",
-    "lead": "Desenvolvimento do website editorial e infraestrutura de backoffice da Accanto Records, gravadora e label party idealizada sob a curadoria de Illusionize. Foco total em tecnologia e engenharia web: implementação com Next.js e exportação estática no Cloudflare Pages, física de movimento com Framer Motion e Lenis, player contínuo integrado à API do Apple Music, experiência horizontal na Label Party e canal de recepção de demos.",
-    "color": "#e94e31",
-    "cover": "accanto/hero.jpg",
-    "hero": "accanto/hero.jpg",
-    "status": "ONLINE · DISPONÍVEL EM ACCANTO.ROMEI.RO",
-    "features": [
-      [
-        "Arquitetura frontend e infraestrutura",
-        "Desenvolvimento em Next.js, React, TypeScript e Tailwind CSS com saída 100% estática via Cloudflare Pages. Zero servidores dinâmicos para manter, alta disponibilidade e carregamento instantâneo."
-      ],
-      [
-        "Player contínuo e streaming de áudio",
-        "Mecanismo persistente de áudio que mantém a reprodução contínua durante toda a navegação. Integração direta com as prévias oficiais da API do Apple Music, controle de volume, progresso e sincronização de estado com o catálogo."
-      ],
-      [
-        "Física de movimento e animações",
-        "Implementação de transições fluidas com Framer Motion e Lenis: entrada com molas balanceadas, efeito de parallax na fotografia de abertura, revelação progressiva do texto do manifesto atrelada ao scroll e rolagem suave."
-      ],
-      [
-        "Label Party em percurso horizontal",
-        "Engenharia da seção Label Party com conversão do scroll vertical padrão em translação horizontal contínua de alta performance, mantendo paridade de experiência entre desktop e toque em dispositivos móveis."
-      ],
-      [
-        "Fluxo de demos e catalogação",
-        "Interface interativa para submissão de faixas com validações no cliente, modais com captura acessível de foco e navegação estruturada do catálogo com filtros dinâmicos por formato."
-      ],
-      [
-        "Acessibilidade e otimização",
-        "Suporte completo a prefers-reduced-motion para desativação de efeitos de movimento, navegação integral por teclado e foco em máxima fidelidade às especificações de design fornecidas pelo cliente."
-      ]
-    ],
-    "gallery": [
-      [
-        "accanto/manifesto.jpg",
-        "Seção manifesto — implementação de revelação de texto progressiva via scroll e efeitos de movimento."
-      ],
-      [
-        "accanto/releases.jpg",
-        "Catálogo de lançamentos — grid dinâmico com filtros em tempo real e integração com o player persistente."
-      ],
-      [
-        "accanto/party.jpg",
-        "Label Party — mecanismo de scroll vertical mapeado para translação horizontal contínua."
-      ],
-      [
-        "accanto/demo.jpg",
-        "Envio de demo — modal interativo acessível para submissão de faixas e integração com backoffice."
-      ],
-      [
-        "accanto/mobile.jpg",
-        "Implementação responsiva mobile — navegação otimizada para toque com player fixo e performance nativa."
-      ]
-    ],
-    "caption": "Website editorial e backoffice — aplicação em produção publicada em accanto.romei.ro.",
-    "image": "assets/cases/accanto/hero.jpg",
-    "alt": "Website oficial da Accanto Records desenvolvido por Vinicius Romeiro.",
-    "productIntro": "Engenharia frontend e tecnologia da plataforma. Todo o desenvolvimento foi focado em performance, física de movimento e reprodução de áudio sem interrupções."
-  },
-  {
     "id": "tapp",
     "name": "tapp.food",
     "category": "BRANDING · UX/UI · WEBSITE · PLATAFORMA",
@@ -127,6 +59,48 @@
     "image": "assets/cases/tapp/marketing.jpg",
     "alt": "Site comercial da tapp.food com identidade tomate e creme.",
     "productIntro": "Cinco aplicações web, uma identidade compartilhada. Capturas reais da implementação local com dados demonstrativos. O projeto está em preparação para lançamento; as telas não representam operação comercial ativa."
+  },
+  {
+    "id": "recebidos",
+    "name": "Recebidos do Bem",
+    "category": "BRANDING COMPLETO · WEBSITE · BACKOFFICE",
+    "type": "marca site sistema",
+    "website": "https://recebidosdobem.com.br",
+    "brand": "https://recebidosdobem.com.br/brand",
+    "title": "Uma marca feita para aproximar.",
+    "lead": "Criamos a marca Recebidos do Bem e todo o seu universo: símbolo, identidade visual, paleta, tipografia e linguagem. Essa identidade ganha vida no website da campanha e no backoffice que organiza cadastros e entregas.",
+    "color": "#edac8e",
+    "features": [
+      [
+        "Branding completo, do significado à aplicação",
+        "O presente que acolhe: laço, caixa e abraço em um símbolo próprio. Coral, creme e marrom, tipografia próxima e linguagem cuidadosa formam uma identidade feita para conectar pessoas."
+      ],
+      [
+        "Um universo de marca para crescer",
+        "Assinaturas, cores, tipografia e estudos de aplicação reunidos em um manual digital. Consistência para comunicar, mobilizar parceiros e levar a marca para diferentes pontos de contato."
+      ],
+      [
+        "Website e cadastramento",
+        "Apresentação da campanha, informações para participantes e parceiros e um fluxo de cadastro organizado em etapas."
+      ],
+      [
+        "Backoffice da campanha",
+        "Painel para a equipe gerenciar cadastros, acompanhar participantes e organizar entregas em um só lugar."
+      ]
+    ],
+    "gallery": [
+      [
+        "brand.webp",
+        "Manual digital da identidade desenvolvida para Recebidos do Bem."
+      ],
+      [
+        "recebidos-aplicacoes.webp",
+        "Estudos de aplicação da identidade: ecobag, caixa e etiqueta."
+      ]
+    ],
+    "caption": "Captura do site público da campanha.",
+    "image": "assets/portfolio/recebidos.webp",
+    "alt": "Captura do site público da campanha."
   },
   {
     "id": "paperx",
@@ -243,72 +217,6 @@
     "alt": "Landing page do Marcen fornecida para o portfólio. O painel exibido na composição usa dados demonstrativos."
   },
   {
-    "id": "recebidos",
-    "name": "Recebidos do Bem",
-    "category": "BRANDING COMPLETO · WEBSITE · BACKOFFICE",
-    "type": "marca site sistema",
-    "website": "https://recebidosdobem.com.br",
-    "brand": "https://recebidosdobem.com.br/brand",
-    "title": "Uma marca feita para aproximar.",
-    "lead": "Criamos a marca Recebidos do Bem e todo o seu universo: símbolo, identidade visual, paleta, tipografia e linguagem. Essa identidade ganha vida no website da campanha e no backoffice que organiza cadastros e entregas.",
-    "color": "#edac8e",
-    "features": [
-      [
-        "Branding completo, do significado à aplicação",
-        "O presente que acolhe: laço, caixa e abraço em um símbolo próprio. Coral, creme e marrom, tipografia próxima e linguagem cuidadosa formam uma identidade feita para conectar pessoas."
-      ],
-      [
-        "Um universo de marca para crescer",
-        "Assinaturas, cores, tipografia e estudos de aplicação reunidos em um manual digital. Consistência para comunicar, mobilizar parceiros e levar a marca para diferentes pontos de contato."
-      ],
-      [
-        "Website e cadastramento",
-        "Apresentação da campanha, informações para participantes e parceiros e um fluxo de cadastro organizado em etapas."
-      ],
-      [
-        "Backoffice da campanha",
-        "Painel para a equipe gerenciar cadastros, acompanhar participantes e organizar entregas em um só lugar."
-      ]
-    ],
-    "gallery": [
-      [
-        "brand.webp",
-        "Manual digital da identidade desenvolvida para Recebidos do Bem."
-      ],
-      [
-        "recebidos-aplicacoes.webp",
-        "Estudos de aplicação da identidade: ecobag, caixa e etiqueta."
-      ]
-    ],
-    "caption": "Captura do site público da campanha.",
-    "image": "assets/portfolio/recebidos.webp",
-    "alt": "Captura do site público da campanha."
-  },
-  {
-    "id": "cuqui",
-    "name": "CUQUI",
-    "category": "WEBSITE · CARDÁPIO DIGITAL",
-    "type": "site",
-    "website": "https://cuqui.com.br",
-    "title": "Uma experiência de dar água na boca.",
-    "lead": "O universo dos cookies artesanais em uma experiência digital cheia de personalidade. Um site que apresenta a marca, valoriza os produtos e aproxima o cliente da próxima fornada.",
-    "color": "#b2aff9",
-    "features": [
-      [
-        "Presença digital com personalidade",
-        "Uma linguagem visual expressiva, com animações e composição que traduzem o universo da CUQUI."
-      ],
-      [
-        "Cardápio e jornada de compra",
-        "Produtos, sabores, disponibilidade e informações de entrega em uma vitrine digital conectada à jornada de pedido."
-      ]
-    ],
-    "gallery": [],
-    "caption": "Captura do website e cardápio digital da CUQUI.",
-    "image": "assets/portfolio/cuqui.webp",
-    "alt": "Captura do website e cardápio digital da CUQUI."
-  },
-  {
     "id": "tidle",
     "name": "TIDLE",
     "category": "BRANDING · WEBSITE · ENTRETENIMENTO",
@@ -335,5 +243,97 @@
     "caption": "Captura da página pública de pré-lançamento do TIDLE.",
     "image": "assets/portfolio/tidle.webp",
     "alt": "Captura da página pública de pré-lançamento do TIDLE."
+  },
+  {
+    "id": "accanto",
+    "name": "Accanto Records",
+    "category": "WEBSITE & BACKOFFICE · ENGENHARIA FRONTEND · NEXT.JS",
+    "type": "site sistema",
+    "client": "Accanto Records",
+    "clientBreadcrumb": "ACCANTO RECORDS × ROMEIRO",
+    "role": "Engenharia frontend e tecnologia",
+    "website": "https://accanto.romei.ro",
+    "title": "Website e backoffice editorial da gravadora sob curadoria de Illusionize.",
+    "lead": "Desenvolvimento do website editorial e infraestrutura de backoffice da Accanto Records, gravadora e label party idealizada sob a curadoria de Illusionize. Foco total em tecnologia e engenharia web: implementação com Next.js e exportação estática no Cloudflare Pages, física de movimento com Framer Motion e Lenis, player contínuo integrado à API do Apple Music, experiência horizontal na Label Party e canal de recepção de demos.",
+    "color": "#e94e31",
+    "cover": "accanto/hero.jpg",
+    "hero": "accanto/hero.jpg",
+    "status": "ONLINE · DISPONÍVEL EM ACCANTO.ROMEI.RO",
+    "features": [
+      [
+        "Arquitetura frontend e infraestrutura",
+        "Desenvolvimento em Next.js, React, TypeScript e Tailwind CSS com saída 100% estática via Cloudflare Pages. Zero servidores dinâmicos para manter, alta disponibilidade e carregamento instantâneo."
+      ],
+      [
+        "Player contínuo e streaming de áudio",
+        "Mecanismo persistente de áudio que mantém a reprodução contínua durante toda a navegação. Integração direta com as prévias oficiais da API do Apple Music, controle de volume, progresso e sincronização de estado com o catálogo."
+      ],
+      [
+        "Física de movimento e animações",
+        "Implementação de transições fluidas com Framer Motion e Lenis: entrada com molas balanceadas, efeito de parallax na fotografia de abertura, revelação progressiva do texto do manifesto atrelada ao scroll e rolagem suave."
+      ],
+      [
+        "Label Party em percurso horizontal",
+        "Engenharia da seção Label Party com conversão do scroll vertical padrão em translação horizontal contínua de alta performance, mantendo paridade de experiência entre desktop e toque em dispositivos móveis."
+      ],
+      [
+        "Fluxo de demos e catalogação",
+        "Interface interativa para submissão de faixas com validações no cliente, modais com captura acessível de foco e navegação estruturada do catálogo com filtros dinâmicos por formato."
+      ],
+      [
+        "Acessibilidade e otimização",
+        "Suporte completo a prefers-reduced-motion para desativação de efeitos de movimento, navegação integral por teclado e foco em máxima fidelidade às especificações de design fornecidas pelo cliente."
+      ]
+    ],
+    "gallery": [
+      [
+        "accanto/manifesto.jpg",
+        "Seção manifesto — implementação de revelação de texto progressiva via scroll e efeitos de movimento."
+      ],
+      [
+        "accanto/releases.jpg",
+        "Catálogo de lançamentos — grid dinâmico com filtros em tempo real e integração com o player persistente."
+      ],
+      [
+        "accanto/party.jpg",
+        "Label Party — mecanismo de scroll vertical mapeado para translação horizontal contínua."
+      ],
+      [
+        "accanto/demo.jpg",
+        "Envio de demo — modal interativo acessível para submissão de faixas e integração com backoffice."
+      ],
+      [
+        "accanto/mobile.jpg",
+        "Implementação responsiva mobile — navegação otimizada para toque com player fixo e performance nativa."
+      ]
+    ],
+    "caption": "Website editorial e backoffice — aplicação em produção publicada em accanto.romei.ro.",
+    "image": "assets/cases/accanto/hero.jpg",
+    "alt": "Website oficial da Accanto Records desenvolvido por Vinicius Romeiro.",
+    "productIntro": "Engenharia frontend e tecnologia da plataforma. Todo o desenvolvimento foi focado em performance, física de movimento e reprodução de áudio sem interrupções."
+  },
+  {
+    "id": "cuqui",
+    "name": "CUQUI",
+    "category": "WEBSITE · CARDÁPIO DIGITAL",
+    "type": "site",
+    "website": "https://cuqui.com.br",
+    "title": "Uma experiência de dar água na boca.",
+    "lead": "O universo dos cookies artesanais em uma experiência digital cheia de personalidade. Um site que apresenta a marca, valoriza os produtos e aproxima o cliente da próxima fornada.",
+    "color": "#b2aff9",
+    "features": [
+      [
+        "Presença digital com personalidade",
+        "Uma linguagem visual expressiva, com animações e composição que traduzem o universo da CUQUI."
+      ],
+      [
+        "Cardápio e jornada de compra",
+        "Produtos, sabores, disponibilidade e informações de entrega em uma vitrine digital conectada à jornada de pedido."
+      ]
+    ],
+    "gallery": [],
+    "caption": "Captura do website e cardápio digital da CUQUI.",
+    "image": "assets/portfolio/cuqui.webp",
+    "alt": "Captura do website e cardápio digital da CUQUI."
   }
 ]

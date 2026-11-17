@@ -176,7 +176,7 @@
 
 /* Circular project exhibition. The center artwork owns the stage. */
 .gallery-controls{display:none}
-@media(min-width:761px){
+@media(min-width:0px){
 .work{overflow:hidden;background:var(--dark)}
 .work .section-head{margin-bottom:32px}
 .work .work-toolbar{padding-bottom:8px}
@@ -206,3 +206,17 @@
 }
 @media(prefers-reduced-motion:reduce){.circular-gallery .project:nth-child(n){transition:none}}
 @media(min-width:761px){.projects-grid.circular-gallery{height:clamp(440px,calc(40vw + 110px),740px)}body:has(.circular-gallery:hover)>.cursor{display:none}}
+/* The same exhibition on touch screens, with shallower perspective. */
+@media(max-width:760px){
+.projects-grid.circular-gallery{height:clamp(300px,calc(50vw + 145px),520px);perspective:1000px;margin-block:0;gap:0}
+.circular-gallery .project:nth-child(n){width:80vw;transform:translate(-50%,-50%) translateX(calc(var(--offset) * 88%)) translateZ(calc(var(--depth) * -130px)) rotateY(calc(var(--offset) * -18deg));transition:transform .65s cubic-bezier(.22,1,.36,1),opacity .4s}
+.circular-gallery .project-info{padding-top:15px!important;gap:10px;min-height:78px}
+.circular-gallery .project-info h3{font-size:clamp(22px,6vw,32px)!important}
+.circular-gallery .project-info p{font-size:10px;line-height:1.5}
+.circular-gallery .project-info>span{display:none}
+.gallery-controls{padding:0 0 32px;gap:24px}
+.gallery-hint{right:auto;bottom:0;font-size:8px}
+.work .section-head{margin-bottom:26px}
+.work .work-toolbar{padding-bottom:0}
+}
+@media(prefers-reduced-motion:reduce){.circular-gallery .project:nth-child(n){transition:none!important}}

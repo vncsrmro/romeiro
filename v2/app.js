@@ -154,10 +154,10 @@ function setupGallery(){
  const controls=document.createElement('div');controls.className='gallery-controls';
  controls.innerHTML='<button type="button" aria-label="Projeto anterior">←</button><span class="gallery-counter" aria-live="polite"></span><button type="button" aria-label="Próximo projeto">→</button><span class="gallery-hint">ARRASTE PARA EXPLORAR</span>';
  grid.after(controls);
- let active=0,visible=cards,startX=null,dragged=false;
- const desktop=matchMedia('(min-width: 761px)');
+ let active=0,visible=cards,startX=null,startY=null,dragged=false;
+
  function render(){
-  visible=cards.filter(c=>!c.hidden);active=(active+visible.length)%visible.length;
+  visible=cards.filter(c=>!c.hidden);active=visible.length?(active+visible.length)%visible.length:0;
   visible.forEach((card,i)=>{
    let offset=(i-active+visible.length)%visible.length;
    if(offset>visible.length/2)offset-=visible.length;
@@ -165,21 +165,21 @@ function setupGallery(){
    card.style.setProperty('--depth',Math.abs(offset));
    card.classList.toggle('gallery-current',i===active);
    card.classList.toggle('gallery-distant',Math.abs(offset)>1);
-   card.tabIndex=desktop.matches&&i!==active?-1:0;
-   if(desktop.matches&&Math.abs(offset)>1)card.setAttribute('aria-hidden','true');else card.removeAttribute('aria-hidden');
+   card.tabIndex=i!==active?-1:0;
+   if(Math.abs(offset)>1)card.setAttribute('aria-hidden','true');else card.removeAttribute('aria-hidden');
   });
   controls.querySelector('.gallery-counter').textContent=String(active+1).padStart(2,'0')+' / '+String(visible.length).padStart(2,'0');
   controls.querySelectorAll('button').forEach(b=>b.disabled=visible.length<2);
  }
  function move(delta){active+=delta;render()}
  const buttons=controls.querySelectorAll('button');buttons[0].onclick=()=>move(-1);buttons[1].onclick=()=>move(1);
- grid.addEventListener('keydown',e=>{if(!desktop.matches||!['ArrowLeft','ArrowRight'].includes(e.key))return;e.preventDefault();move(e.key==='ArrowLeft'?-1:1);visible[active].focus({preventScroll:true})});
- grid.addEventListener('pointerdown',e=>{if(!desktop.matches||e.button!==0)return;startX=e.clientX;dragged=false});
- grid.addEventListener('pointermove',e=>{if(startX!==null&&Math.abs(e.clientX-startX)>12)dragged=true});
- window.addEventListener('pointerup',e=>{if(startX===null)return;const distance=e.clientX-startX;startX=null;if(Math.abs(distance)>45)move(distance<0?1:-1)});
+ grid.addEventListener('keydown',e=>{if(!['ArrowLeft','ArrowRight'].includes(e.key))return;e.preventDefault();move(e.key==='ArrowLeft'?-1:1);visible[active].focus({preventScroll:true})});
+ grid.addEventListener('pointerdown',e=>{if(e.button!==0||!e.isPrimary)return;startX=e.clientX;startY=e.clientY;dragged=false});
+ grid.addEventListener('pointermove',e=>{if(startX!==null&&Math.abs(e.clientX-startX)>12&&Math.abs(e.clientX-startX)>Math.abs(e.clientY-startY))dragged=true});
+ window.addEventListener('pointerup',e=>{if(startX===null)return;const distance=e.clientX-startX;startX=null;if(Math.abs(distance)>35&&Math.abs(distance)>Math.abs(e.clientY-startY))move(distance<0?1:-1)});
  window.addEventListener('pointercancel',()=>{startX=null;dragged=false});
  grid.addEventListener('dragstart',e=>e.preventDefault());
- grid.addEventListener('click',e=>{if(!desktop.matches)return;const card=e.target.closest('.project');if(dragged){e.preventDefault();dragged=false;return}if(card&&!card.classList.contains('gallery-current')){e.preventDefault();active=visible.indexOf(card);render()}},true);
+ grid.addEventListener('click',e=>{const card=e.target.closest('.project');if(dragged){e.preventDefault();dragged=false;return}if(card&&!card.classList.contains('gallery-current')){e.preventDefault();active=visible.indexOf(card);render()}},true);
  document.querySelectorAll('[data-filter]').forEach(b=>b.addEventListener('click',()=>{active=0;render()}));
- desktop.addEventListener('change',render);render();
+ render();
 }
