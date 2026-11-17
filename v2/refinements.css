@@ -173,3 +173,36 @@
 .elefante-spotlight.motion-paused .agent-character{opacity:1;transform:none}
 @media(max-width:760px){.agent-universe{height:385px;margin-inline:-10px}.agent-character{width:94px}.agent-position-1,.agent-position-4{left:calc(50% - 47px)}.agent-face{width:49px;height:49px;border-radius:17px}.agent-name{font-size:11px}.agent-role{font-size:7px}.elephant-emblem{width:86%;left:7%}.theatre-heading{font-size:7px;gap:8px}.about-copy h2 em{line-height:1.2}.elephant-backdrop{width:120%;right:-50%;top:0}}
 @media(prefers-reduced-motion:reduce){.agent-character,.agent-float,.agent-face i,.elephant-emblem{animation:none!important}.agent-character{opacity:1;transform:none}.motion-toggle{display:none}}
+
+/* Circular project exhibition. The center artwork owns the stage. */
+.gallery-controls{display:none}
+@media(min-width:761px){
+.work{overflow:hidden;background:var(--dark)}
+.work .section-head{margin-bottom:32px}
+.work .work-toolbar{padding-bottom:8px}
+.projects-grid.circular-gallery{display:block;position:relative;height:clamp(400px,43vw,640px);perspective:1600px;isolation:isolate;touch-action:pan-y;cursor:grab;margin-inline:calc(-1 * var(--gutter));overflow:hidden}
+.circular-gallery:active{cursor:grabbing}
+.circular-gallery .project:nth-child(n){display:block;position:absolute;left:50%;top:50%;width:min(62vw,900px);padding:0;margin:0;grid-column:auto;opacity:1;transform:translate(-50%,-50%) translateX(calc(var(--offset) * 78%)) translateZ(calc(var(--depth) * -240px)) rotateY(calc(var(--offset) * -24deg));transition:transform .85s cubic-bezier(.22,1,.36,1),opacity .6s;z-index:calc(10 - var(--depth));outline-offset:5px}
+.circular-gallery .project[hidden]{display:none}
+.circular-gallery .project.gallery-distant{opacity:0;pointer-events:none;visibility:hidden}
+.circular-gallery .project-art{aspect-ratio:16/10;transform:none;border-radius:4px;background:var(--ink)}
+.circular-gallery .project-art>img{object-fit:cover;padding:0;transform:none}
+.circular-gallery .project:hover .project-art>img{transform:none}
+.circular-gallery .project:not(.gallery-current) .project-art{filter:brightness(.55)}
+.circular-gallery .project-info{display:flex!important;padding:17px 0 0!important;align-items:center;gap:20px}
+.circular-gallery .project-info h3{font-size:clamp(25px,2.8vw,42px)!important;line-height:1.1!important}
+.circular-gallery .project-info p{margin:6px 0 0!important;max-width:none!important;font-size:10px}
+.circular-gallery .project-info>span{display:block;color:var(--lime)}
+.circular-gallery .project:not(.gallery-current) .project-info{opacity:0}
+.circular-gallery .project-open{display:none}
+.gallery-controls{display:flex;justify-content:center;align-items:center;gap:22px;position:relative;padding:12px 0 22px}
+.gallery-controls button{border:1px solid color-mix(in srgb,var(--paper) 35%,transparent);width:48px;height:48px;border-radius:50%;background:transparent;color:var(--paper);font-size:23px;transition:background .2s,color .2s}
+.gallery-controls button:hover{background:var(--lime);color:var(--ink)}
+.gallery-controls button:disabled{opacity:.3;cursor:default}
+.gallery-counter{font-size:11px;letter-spacing:.12em;font-variant-numeric:tabular-nums;min-width:65px;text-align:center}
+.gallery-hint{position:absolute;right:0;font-size:8px;letter-spacing:.1em;color:var(--paper);opacity:.6}
+.work-foot{margin-top:20px}
+.work .cursor{display:none}
+}
+@media(prefers-reduced-motion:reduce){.circular-gallery .project:nth-child(n){transition:none}}
+@media(min-width:761px){.projects-grid.circular-gallery{height:clamp(440px,calc(40vw + 110px),740px)}body:has(.circular-gallery:hover)>.cursor{display:none}}

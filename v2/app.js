@@ -7,7 +7,7 @@ const category={accanto:'Website & Backoffice · Next.js',tapp:'Branding · UX/U
 const observer=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');observer.unobserve(e.target)}}),{threshold:.08});
 const observe=()=>document.querySelectorAll('.reveal:not(.visible)').forEach(el=>observer.observe(el));observe();
 const grid=document.getElementById('projects-grid');
-try{const response=await fetch('/cases.json');if(!response.ok)throw Error();const projects=await response.json();grid.innerHTML=projects.map((p,i)=>{const [cover,bg,cls]=[p.cover||p.id+'.webp',p.color||'#edede5',''];return `<a class="project reveal" href="/projeto/?id=${p.id}" data-type="${p.type}" style="--project-bg:${bg}" aria-label="Explorar case ${escapeHTML(p.name)}"><div class="project-art ${cls}"><img loading="lazy" src="/assets/cases/${cover}" alt="${escapeHTML(p.name)} — ${escapeHTML(p.title)}"><span class="project-index">0${i+1} / ${String(projects.length).padStart(2,'0')}</span><span class="project-open" aria-hidden="true">↗</span></div><div class="project-info"><div><h3>${escapeHTML(p.name)}</h3><p>${escapeHTML(category[p.id]||p.category)}</p></div><span>VER PROJETO ↗</span></div></a>`}).join('');observe();setupProjects();}catch{grid.innerHTML='<p>Não foi possível carregar os projetos. <a href="/">Recarregar página ↗</a></p>'}
+try{const response=await fetch('/cases.json');if(!response.ok)throw Error();const projects=await response.json();grid.innerHTML=projects.map((p,i)=>{const [cover,bg,cls]=[p.cover||p.id+'.webp',p.color||'#edede5',''];return `<a class="project reveal" href="/projeto/?id=${p.id}" data-type="${p.type}" style="--project-bg:${bg}" aria-label="Explorar case ${escapeHTML(p.name)}"><div class="project-art ${cls}"><img loading="lazy" src="/assets/cases/${cover}" alt="${escapeHTML(p.name)} — ${escapeHTML(p.title)}"><span class="project-index">0${i+1} / ${String(projects.length).padStart(2,'0')}</span><span class="project-open" aria-hidden="true">↗</span></div><div class="project-info"><div><h3>${escapeHTML(p.name)}</h3><p>${escapeHTML(category[p.id]||p.category)}</p></div><span>VER PROJETO ↗</span></div></a>`}).join('');observe();setupProjects();setupGallery();}catch{grid.innerHTML='<p>Não foi possível carregar os projetos. <a href="/">Recarregar página ↗</a></p>'}
 document.querySelectorAll('[data-filter]').forEach(button=>button.addEventListener('click',()=>{document.querySelectorAll('[data-filter]').forEach(b=>{b.classList.toggle('active',b===button);b.setAttribute('aria-pressed',b===button?'true':'false')});document.querySelectorAll('.project').forEach(card=>{card.hidden=button.dataset.filter!=='all'&&!card.dataset.type.split(' ').includes(button.dataset.filter);if(card.hidden)card.querySelector('video')?.pause()});observe()}));
 function setupProjects(){const cursor=document.querySelector('.cursor');document.querySelectorAll('.project').forEach(card=>{const art=card.querySelector('.project-art');const start=async()=>{if(reduced)return;if(card.matches(':hover')||card.contains(document.activeElement))card.classList.add('is-playing');};const stop=()=>{card.classList.remove('is-playing');art.style.removeProperty('--rx');art.style.removeProperty('--ry');cursor.classList.remove('active')};card.addEventListener('mouseenter',()=>{start();if(fine&&!reduced)cursor.classList.add('active')});card.addEventListener('mouseleave',stop);card.addEventListener('focus',start);card.addEventListener('blur',stop);card.addEventListener('mousemove',event=>{if(!fine||reduced)return;const r=art.getBoundingClientRect(),x=(event.clientX-r.left)/r.width,y=(event.clientY-r.top)/r.height;art.style.setProperty('--rx',`${(y-.5)*-4}deg`);art.style.setProperty('--ry',`${(x-.5)*4}deg`);art.style.setProperty('--mx',`${x*100}%`);art.style.setProperty('--my',`${y*100}%`);cursor.style.left=event.clientX+'px';cursor.style.top=event.clientY+'px'})})}
 const menu=document.querySelector('.menu-button'),mobile=document.querySelector('.mobile-nav');function closeMenu(){menu.setAttribute('aria-expanded','false');menu.setAttribute('aria-label','Abrir menu');mobile.hidden=true}menu.addEventListener('click',()=>{const open=menu.getAttribute('aria-expanded')==='true';menu.setAttribute('aria-expanded',String(!open));menu.setAttribute('aria-label',open?'Abrir menu':'Fechar menu');mobile.hidden=open});mobile.querySelectorAll('a').forEach(a=>a.addEventListener('click',closeMenu));document.addEventListener('keydown',e=>{if(e.key==='Escape'){closeMenu();menu.focus()}});matchMedia('(min-width:761px)').addEventListener('change',e=>{if(e.matches)closeMenu()});
@@ -144,4 +144,42 @@ if (elephantSection && motionToggle) {
   new IntersectionObserver(([entry]) => {
     elephantSection.classList.toggle('motion-offscreen', !entry.isIntersecting);
   }).observe(elephantSection);
+}
+
+function setupGallery(){
+ const cards=[...grid.querySelectorAll('.project')];
+ if(!cards.length)return;
+ grid.classList.add('circular-gallery');
+ grid.setAttribute('aria-label','Galeria de projetos');
+ const controls=document.createElement('div');controls.className='gallery-controls';
+ controls.innerHTML='<button type="button" aria-label="Projeto anterior">←</button><span class="gallery-counter" aria-live="polite"></span><button type="button" aria-label="Próximo projeto">→</button><span class="gallery-hint">ARRASTE PARA EXPLORAR</span>';
+ grid.after(controls);
+ let active=0,visible=cards,startX=null,dragged=false;
+ const desktop=matchMedia('(min-width: 761px)');
+ function render(){
+  visible=cards.filter(c=>!c.hidden);active=(active+visible.length)%visible.length;
+  visible.forEach((card,i)=>{
+   let offset=(i-active+visible.length)%visible.length;
+   if(offset>visible.length/2)offset-=visible.length;
+   card.style.setProperty('--offset',offset);
+   card.style.setProperty('--depth',Math.abs(offset));
+   card.classList.toggle('gallery-current',i===active);
+   card.classList.toggle('gallery-distant',Math.abs(offset)>1);
+   card.tabIndex=desktop.matches&&i!==active?-1:0;
+   if(desktop.matches&&Math.abs(offset)>1)card.setAttribute('aria-hidden','true');else card.removeAttribute('aria-hidden');
+  });
+  controls.querySelector('.gallery-counter').textContent=String(active+1).padStart(2,'0')+' / '+String(visible.length).padStart(2,'0');
+  controls.querySelectorAll('button').forEach(b=>b.disabled=visible.length<2);
+ }
+ function move(delta){active+=delta;render()}
+ const buttons=controls.querySelectorAll('button');buttons[0].onclick=()=>move(-1);buttons[1].onclick=()=>move(1);
+ grid.addEventListener('keydown',e=>{if(!desktop.matches||!['ArrowLeft','ArrowRight'].includes(e.key))return;e.preventDefault();move(e.key==='ArrowLeft'?-1:1);visible[active].focus({preventScroll:true})});
+ grid.addEventListener('pointerdown',e=>{if(!desktop.matches||e.button!==0)return;startX=e.clientX;dragged=false});
+ grid.addEventListener('pointermove',e=>{if(startX!==null&&Math.abs(e.clientX-startX)>12)dragged=true});
+ window.addEventListener('pointerup',e=>{if(startX===null)return;const distance=e.clientX-startX;startX=null;if(Math.abs(distance)>45)move(distance<0?1:-1)});
+ window.addEventListener('pointercancel',()=>{startX=null;dragged=false});
+ grid.addEventListener('dragstart',e=>e.preventDefault());
+ grid.addEventListener('click',e=>{if(!desktop.matches)return;const card=e.target.closest('.project');if(dragged){e.preventDefault();dragged=false;return}if(card&&!card.classList.contains('gallery-current')){e.preventDefault();active=visible.indexOf(card);render()}},true);
+ document.querySelectorAll('[data-filter]').forEach(b=>b.addEventListener('click',()=>{active=0;render()}));
+ desktop.addEventListener('change',render);render();
 }
